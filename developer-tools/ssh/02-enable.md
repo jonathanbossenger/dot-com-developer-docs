@@ -10,9 +10,17 @@ If you have already created the SSH credentials, perhaps when you set up SFTP ac
 
 \[/Callout block\]
 
-Visit your site's WordPress.com dashboard and navigate to Hosting → **Overview** (or Settings → **Hosting Configuration** if using the default interface style). Click the **Server Settings** tab. 
+Visit your site's WordPress.com dashboard and navigate to Hosting → **Overview** (or Settings → **Hosting Configuration** if using the default interface style). Click the **Settings** tab and then select the **SFTP/SSH** menu item. 
 
-Click **Create credentials**. This only needs to be done once and will generate the SSH username and password for the selected site. These credentials are used for both SSH and [SFTP](docs.wordpress.com/developer-tools/sftp) connections. 
+Click **Create credentials**. 
+
+![Create credentials](updated-images/01-create-credentials.png)
+
+\[Callout block \- info\]
+
+This only needs to be done once and will generate the SSH username and password for the selected site. These credentials are used for both SSH and [SFTP](docs.wordpress.com/developer-tools/sftp) connections. 
+
+\[/Callout block\]
 
 Store the password in a safe place, as it will only be displayed once.
 
