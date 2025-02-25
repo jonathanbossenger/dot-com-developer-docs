@@ -1,6 +1,14 @@
 # Connect to SSH
 
-You will need your SSH username, password, and a terminal program to access your site via SSH. Below are instructions to connect via some of the most common programs.
+You will need your SSH username, password, and a terminal program to access your site via SSH. 
+
+\[Callout block \- info\]
+
+If you have not already created the SSH credentials, see the Enable SSH page for details. 
+
+\[/Callout block\]
+
+Below are instructions to connect via some of the most common programs.
 
 ## How to Connect to SSH on MacOS and Linux
 
