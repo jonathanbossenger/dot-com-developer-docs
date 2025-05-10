@@ -1,8 +1,6 @@
 # Shell Commands
 
-[Callout - info]
-You should be careful with running commands to prevent data loss or damage your site. Make sure to only run commands when you know exactly what they will do.
-[/Callout]
+\[Callout \- info\] You should be careful with running commands to prevent data loss or damage to your site. Make sure to only run commands when you know exactly what they will do. \[/Callout\]
 
 Extensive resources are available on using the Linux command line. Some popular examples include the following third-party sources:
 
@@ -14,7 +12,7 @@ Extensive resources are available on using the Linux command line. Some popular 
 Below are some common commands:
 
 | Command | Description |
-|---------|-------------|
+| :---- | :---- |
 | ls | Show a list of the current directory's contents. |
 | cd | Change directory. |
 | mkdir | Create a new folder/directory. |
@@ -42,4 +40,4 @@ There are many commands and subcommands that can help with managing and troubles
 
 If something happens to your site after you've made changes via SSH, you can restore your site from a [Jetpack backup](https://wordpress.com/support/backup/).
 
-If you run a command and something happens you didn't expect, we can help you restore your site to an earlier point from before you ran the command. We will not be able to help you debug your command to make it work as expected. 
+If you run a command and something happens you didn't expect, we can help you restore your site to an earlier point from before you ran the command. We will not be able to help you debug your command to make it work as expected.

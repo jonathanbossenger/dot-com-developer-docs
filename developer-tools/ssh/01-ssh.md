@@ -14,4 +14,4 @@ The SSH
 * Connect to SSH
 * Generate SSH key
 * How to use Shell Commands
-* FAQs
+* Frequently Asked Questions
