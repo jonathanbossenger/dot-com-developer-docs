@@ -8,7 +8,7 @@ This feature is available on sites with the [WordPress.com Business or Commerce 
 
 \[/Callout block\]
 
-The SSH
+The SSH documentation includes sections on enabling SSH to connect to your server, configuring your SSH key for improved security, and common shell commands.
 
 * Enable SSH
 * Connect to SSH

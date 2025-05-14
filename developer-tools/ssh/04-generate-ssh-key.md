@@ -1,4 +1,4 @@
-# SSH Keys
+# Generate SSH Key
 
 SSH Keys are a more secure way to connect via SSH. An SSH key pair comprises a private and public key. The public key is configured on the server, and the private key remains on the local computer. Once configured, SSH keys do not require you to enter a password every time you connect, as the key pair handles authentication. If the private key on the local computer matches the public key configured on the server, the user can connect.
 
