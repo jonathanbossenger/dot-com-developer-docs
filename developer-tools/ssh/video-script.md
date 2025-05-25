@@ -14,7 +14,7 @@ Let's get started!
 
 ## **1. Enabling SSH on a WordPress.com Site**
 
-Before you can connect via SSH, you need to enable SSH access and create your credentials.
+SSH is available on all WordPress.com Business and eCommerce plans. Before you can connect via SSH, you need to enable SSH access and create your credentials.
 
 - To start, log into your WordPress.com dashboard and navigate to your site's *Settings* page.
     - If you use the Classic admin style: go to *Hosting → Site Settings*
@@ -31,9 +31,7 @@ Now that SSH is enabled, and you have your credentials, let's connect.
 
 ### **On macOS and Linux:**
 
-- On macOS and Linux, open your terminal application.
-    - On macOS: *Applications → Utilities → Terminal*
-    - On Linux: Open your preferred terminal app[3]
+- On macOS and Linux, find and open the default terminal application.
 - Paste the SSH command you copied earlier. It looks like:
   ```
   ssh username.wordpress.com@ssh.wp.com
@@ -59,22 +57,24 @@ You can find instructions on how to use PuTTY to connect to SSH in the [PuTTY do
 
 ## **3. Generating an SSH Key for Passwordless Authentication**
 
-SSH keys let you connect to SSH more securely. SSH keys are linked to your computer, so you can use them to authenticate without entering a password. This is especially useful for automated tasks or when you need to connect frequently.
+WordPress.com also supports something called SSH Keys that let you connect to SSH more securely. SSH keys are linked to your computer, so you can use them to authenticate without entering a password. 
 
 ### **A. Generate an SSH Key Pair**
 
-The first step is to generate an SSH key pair. This consists of a private key (which is kept on your computer) and a public key (which is shared with the server).
+The first step is to generate an SSH key pair, which by default are stored in the `.ssh` directory for your user. 
+
+A key pair consists of a private key (which is kept on your computer) and a public key (which is shared with the server).
 
 #### **On macOS and Linux:**
 
-- Open a Terminal and run:
+- On macOS and Linux Open your Terminal and run:
   ```
   ssh-keygen -t ed25519
   ```
 - When prompted, enter a file name for your key or press Enter to accept the default file location.
-- When Enter a secure passphrase to add want extra protection. 
+- You can also enter a secure passphrase if you want to add extra protection. 
 
-This creates a private and public key in your `.ssh` directory. The public key file ends with `.pub`.
+This creates the private and public key in your `.ssh` directory. 
 
 #### **On Windows:**
 
@@ -90,9 +90,7 @@ Your keys will be saved in the chosen location, with the public key ending in `.
 
 #### A note on the SSH passphrase:
 
-If you set a passphrase, you'll need to enter it the first time you want to connect using the key in a new terminal session. This is normal, and your computer will remember the passphrase for the session. 
-
-Some operating systems, like macOS, have a built-in SSH agent that can remember your passphrase for you.
+If you set a passphrase for your key pair, you'll need to enter it the first time you want to connect using the key in a new terminal session. This is normal, and your computer will remember the passphrase for the session.
 
 ### **B. Add Your Public SSH Key to Your WordPress.com Account**
 
@@ -121,19 +119,18 @@ Your public SSH key needs to be added to your WordPress.com account so the serve
 
 Now that your public key is saved in your WordPress.com account, you need to attach it to your site.
 
-- Go to your site's *Settings* page:
-    - Classic style: *Hosting → Site Settings*
-    - Default style: *Settings → Server Settings*
-- Click the **SFTP/SSH** tab.
-- Use the **SSH Keys** dropdown to select your key.
+- Go to your site's *Settings* page and navigate back to the **SFTP/SSH** tab.
+- At the bottom of the pageuUse the **SSH Keys** dropdown to select your key.
 - Click **Attach SSH Key to Site**[4].
 
-Your SSH key is now set up for your site. When you connect via SSH, you'll be authenticated automatically using your key and not asked for your SSH password.
+Your SSH key is now set up for your site. When you connect via SSH, you'll be authenticated automatically using your key. Notice how it askes for the passphrase, but not the SSH password.
 
 ## **Conclusion**
 
-You've now enabled SSH, connected for the first time, and set up SSH keys for secure, passwordless access to your WordPress.com site. 
+In this video you learned how to enable SSH, generate your SSH key and how to connect to SSH to manage your site.
 
 For tips on how to use shell commands, as well as frequently asked questions, check out the [official WordPress.com developer documentation on SSH](https://developer.wordpress.com/docs/developer-tools/ssh/).
 
 While you're there, take a look at the [section on WP CLI](https://developer.wordpress.com/docs/developer-tools/wp-cli/) for details on how to manage all aspects of your WordPress.com site via SSH.
+
+If you enjoyed this video, please give it a like and subscribe to our channel for more WordPress.com developer tools tutorials.
