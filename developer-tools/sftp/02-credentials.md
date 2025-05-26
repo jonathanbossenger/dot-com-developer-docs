@@ -16,7 +16,7 @@ To access your site's SFTP credentials for the first time, take the following st
 
 ![02-enable-ssh 1.png](images/02-enable-ssh%201.png)
 
-5. Store the password in a safe place. If you lose or forget your password, the "**Reset** **password**" button can be used to generate a new one.
+5. Store the password in a safe place. If you lose or forget your password, the "**Reset password**" button can be used to generate a new one.
 
 The SFTP/SSH credentials will be displayed in the following format:
 
