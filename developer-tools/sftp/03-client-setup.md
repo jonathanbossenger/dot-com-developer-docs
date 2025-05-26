@@ -15,7 +15,7 @@ FileZilla is a popular, free, and open-source SFTP client that works on Windows,
 3. Set the *Protocol* field to *SFTP (SSH File Transfer Protocol)*, not FTP.
 4. Add the credentials (URL [in the *Host* field], *Port*, *Username*, and *Password*) you obtained [earlier](credentials.md).
 
-![filezilla-03.png](images/filezilla-03.png)
+![filezilla-03.png](https://raw.githubusercontent.com/jonathanbossenger/dot-com-developer-docs/refs/heads/main/developer-tools/sftp/images/filezilla-03.png)
 
 5. Click the **Connect** button.
 6. If you are asked to accept the server's host key, click **OK** to proceed.
@@ -30,11 +30,11 @@ Cyberduck is available both on macOS and Windows. You can download the Cyberduck
 2. In the *New Bookmark* window, select *SFTP (SSH File Transfer Protocol)* from the dropdown.
 3. Set the *Server*, *Port*, *Username* and *Password* fields with the credentials you obtained [earlier](credentials.md).
 
-![cyberduck-02.png](images/cyberduck-02.png)
+![cyberduck-02.png](https://raw.githubusercontent.com/jonathanbossenger/dot-com-developer-docs/refs/heads/main/developer-tools/sftp/images/cyberduck-02.png)
 
 4. Close the *New Bookmark* window, and then double click on the bookmark to connect
 5. If you are asked to accept the server's fingerprint key, click **Allow** to proceed.
 
 Once connected, you will see your site's files in the Cyberduck interface. 
 
-![cyberduck-04.png](images/cyberduck-04.png)
+![cyberduck-04.png](https://raw.githubusercontent.com/jonathanbossenger/dot-com-developer-docs/refs/heads/main/developer-tools/sftp/images/cyberduck-04.png)
