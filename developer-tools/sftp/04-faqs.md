@@ -14,7 +14,7 @@ Make sure you've specified an SFTP connection in your client's settings. If you 
 
 ## I uploaded images/videos via SFTP, but they are not showing in my Media Library.
 
-This is expected as WordPress does not recognize media files uploaded via SFTP. While they are accessible via the direct URL, these will not show inside the admin area. You can use plugins like [Media Sync to resolve this, so images and videos](https://wordpress.com/plugins/media-sync/) uploaded to the site via SFTP will appear normally in your [Media](https://wordpress.com/support/media/).
+This is expected as WordPress does not recognize media files uploaded via SFTP. While they are accessible via the direct URL, these will not show inside the admin area. You can use plugins like [Media Sync to resolve this, so images and videos](https://wordpress.com/plugins/media-sync/) uploaded to the site via SFTP will appear normally in your *Media*.
 
 ## What file permissions should I set?
 
@@ -44,7 +44,7 @@ While we try to ensure your site here at WordPress.com is compatible with as man
 
 ## I'm trying to upload a theme to my site, but it says it is too big. Can I upload it via SFTP?
 
-Yes. While you'll be able to [upload a theme](https://wordpress.com/support/themes/uploading-setting-up-custom-themes/) by going to *Appearance → Themes → **Add New***, there's a 50MB upload limit for security, as some themes may include other files that are not part of the theme itself.
+Yes. While you'll be able to [upload a theme](https://wordpress.com/support/themes/uploading-setting-up-custom-themes/) by going to *Appearance → Themes → Add New*, there's a 50MB upload limit for security, as some themes may include other files that are not part of the theme itself.
 
 The first step in these cases would be to double-check if you have the correct theme files. Themes from third-party vendors may include things inside their zip file, like demo content or license information. You'll want to make sure you only upload the WordPress-installable theme files to your site.
 
