@@ -1,5 +1,29 @@
 # Frequently Asked Questions
 
+## Which files and folders can I edit via SFTP?
+
+### Why can't I access certain folders via SFTP?
+
+Some directories of your file system structure are locked and cannot be accessed via SFTP. This is vital for security and helps ensure the functionality of your site.
+
+The screenshot below shows that some core directories have a ? mark icon next to them. This denotes that the directory is part of your site's core WordPress installation. These core files cannot be modified as they are required to ensure your site is functional.
+
+![WordPress file structure with locked folders](https://wpdeveloperstaging.files.wordpress.com/2024/02/sftp-folders-wordpress.png)
+
+### Can I edit my site's wp-config.php file?
+
+Yes, you can modify your site's `wp-config.php` file. We recommend that you do not touch this file unless absolutely necessary. If you're not sure if you should make changes, [contact us](https://developer.wordpress.com/docs/support/) before you make a change.
+
+### Can I edit the active theme's functions.php?
+
+For most WordPress.com-provided themes, the `functions.php` file is [symlinked](https://wordpress.com/support/symlinked-files-and-folders/) and protected. This means it cannot be edited. However, third-party and manually installed themes allow their `functions.php` to be changed.
+
+Please keep in mind that editing or adding untested code to `functions.php` can crash your site, and changes are often lost when the theme is updated. We recommend using plugins such as [Code Snippets](https://wordpress.com/plugins/code-snippets/) if you want to apply any modifications to your site's `functions.php` file. This plugin allows more control and granularity over where these snippets are run, and snippets in the plugin can be easily disabled if something does not go as expected.
+
+### Can I edit core WordPress files?
+
+No, you cannot edit core WordPress files or the default WordPress.com themes and plugins. These files are essential to keep your site functional. They are not editable via SFTP.
+
 ## I uploaded a plugin/theme and can't see it in my dashboard?
 
 Make sure you've uploaded it to the correct folder. If plugins aren't in `/wp-content/plugins/` and themes aren't in `/wp-content/themes/`, they won't work.
@@ -20,23 +44,9 @@ This is expected as WordPress does not recognize media files uploaded via SFTP. 
 
 By default, your folders and file permissions should be set to 755. Changing these settings can break your site. You'll also see some [symlinked files](https://wordpress.com/support/symlinked-files-and-folders/) may appear to have different permissions. This is normal and cannot be changed.
 
-## Can I edit my site's wp-config.php file?
-
-Yes, you can modify your site's `wp-config.php` file. We recommend that you do not touch this file unless absolutely necessary. If you're not sure if you should make changes, [contact us](https://developer.wordpress.com/docs/support/) before you make a change.
-
-## Can I edit functions.php?
-
-For most WordPress.com-provided themes, the functions.php file is [symlinked](https://wordpress.com/support/symlinked-files-and-folders/) and protected. This means it cannot be edited. However, third-party and manually installed themes allow their functions.php to be changed.
-
-Please keep in mind that editing or adding untested code to functions.php can crash your site, and changes are often lost when the theme is updated. We recommend using plugins such as [Code Snippets](https://wordpress.com/plugins/code-snippets/) if you want to apply any modifications to your site's functions.php file. This plugin allows more control and granularity over where these snippets are run, and snippets in the plugin can be easily disabled if something does not go as expected.
-
 ## Does content uploaded via SFTP count against my site's storage limits?
 
 Yes, the content you upload via SFTP counts against your site's [storage limits](https://developer.wordpress.com/docs/platform-features/storage/), similar to the content you upload via the [Media Library](https://wordpress.com/support/media/).
-
-## Can I edit core WordPress files?
-
-No, you cannot edit core WordPress files or the default WordPress.com themes and plugins. These files are essential to keep your site functional. They are not editable via SFTP.
 
 ## I uploaded a plugin using SFTP, but I can't activate it. What should I do?
 
@@ -53,14 +63,6 @@ If you've removed the extra files, but you're still getting an error, you can us
 ## Can I add custom PHP modules like ioncube?
 
 No. While some plugins require custom PHP modules to be installed to function, this is set on the server side and cannot be changed. You can review our [server environment details here](https://wordpress.com/support/php-environment/).
-
-## Why can't I access certain folders via SFTP?
-
-Some directories of your file system structure are locked and cannot be accessed via SFTP. This is vital for security and helps ensure the functionality of your site.
-
-The screenshot below shows that some core directories have a ? mark icon next to them. This denotes that the directory is part of your site's core WordPress installation. These core files cannot be modified as they are required to ensure your site is functional. 
-
-![WordPress file structure with locked folders](https://wpdeveloperstaging.files.wordpress.com/2024/02/sftp-folders-wordpress.png)
 
 ## How do I grant my plugin or theme developer access to my site via SFTP?
 
