@@ -10,7 +10,7 @@ SFTP is a method to access the files and folders on a website via a client progr
 
 SFTP is not a more secure version of FTP (File Transfer Protocol), even though they share similar names. While their application is similar, and both are possible via many of the same client programs, they each use very different underlying technologies.
 
-While GitHub Deployments are generaly used to deploy code updates to your site, SFTP is often used to transfer media files. SFTP is often also useful for debugging issues with your site by allowing you to access the file system directly, especially if you use a [staging site](https://developer.wordpress.com/docs/developer-tools/staging-sites/).
+While [GitHub Deployments](https://developer.wordpress.com/docs/developer-tools/github-deployments/) are generally used to deploy code updates to your site, SFTP is often used to transfer media files. SFTP is also useful for debugging issues with your site by allowing you to access the file system directly, especially if you use a [staging site](https://developer.wordpress.com/docs/developer-tools/staging-sites/).
 
 ## SFTP Documentation
 
