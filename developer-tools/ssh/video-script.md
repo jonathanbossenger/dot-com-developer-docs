@@ -1,4 +1,4 @@
-# Video Script: Connecting to a WordPress.com Site Using SSH
+# How to connect to your WordPress.com site using SSH
 
 ## **Introduction**
 

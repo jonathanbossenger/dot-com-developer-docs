@@ -1,190 +1,82 @@
-## Video Script: Setting Up and Connecting to SFTP on WordPress.com
+# How to connect to your WordPress.com site via SSH
 
----
+## **Introduction**
 
-### **Introduction**
+Hey everyone! I’m Jonathan, and welcome to this video on using SFTP on WordPress.com. 
 
-Hey everyone! I’m [Your Name], and welcome to today’s tutorial. If you’re looking to manage your WordPress.com site files more efficiently, you’re in the right place. In this video, I’ll walk you through setting up and connecting to SFTP on WordPress.com, so you can securely access, upload, and manage your site files like a pro.
-
-We’ll cover what SFTP is, why it’s useful, how to create your SFTP credentials, set up popular SFTP clients on Windows, macOS, and Linux, and connect to your WordPress.com site. I’ll also share tips, troubleshooting advice, and point you to official resources for deeper dives.
+Today I’ll walk you through setting up and connecting to SFTP on WordPress.com, so you can securely access, upload, and manage your site files like a pro.
 
 Let’s get started!
-
----
 
 ## **What is SFTP, and Why Use It?**
 
 Before we jump into the setup, let’s quickly talk about SFTP.
 
-SFTP stands for *SSH File Transfer Protocol*. It’s a secure way to transfer files between your computer and your WordPress.com site. Unlike regular FTP, SFTP encrypts your data, keeping your credentials and files safe from prying eyes.
+SFTP stands for *SSH File Transfer Protocol*. It’s a secure way to transfer files between your computer and your WordPress.com site. Unlike regular FTP, SFTP uses the same protocol as SSH which encrypts your data, keeping your credentials and files safe and secure.
 
-**Why use SFTP with WordPress.com?**
-- Securely upload, download, or edit files on your site.
-- Manage theme or plugin files (for Business and Commerce plans).
-- Troubleshoot issues or restore site content if something goes wrong.
+To use SFTP, you’ll need to create unique SFTP credentials for your WordPress.com site.
 
-> **Note:** SFTP access is only available for WordPress.com sites on the Business or Commerce plans.
-
----
+These credentials are the same as your SSH credentials, so if you’ve already set up SSH, the process is similar.
 
 ## **Creating and Enabling Your SFTP/SSH Credentials**
 
-To use SFTP, you’ll need to create unique SFTP/SSH credentials for your WordPress.com site.
+SFTP access is only available for WordPress.com sites on the Business or Commerce plans.
 
-### **Step 1: Access Your Site’s SFTP Settings**
+1. To start, log in to your WordPress.com account, and navigate to your site's Settings.
+   - If you use the Classic admin style: go to *Hosting → Site Settings*
+   - If you use the Default style: go to *Settings → Server Settings*
+- Click the **SFTP/SSH** tab.
+- Click **Create credentials**. This generates your SFTP/SSH username and password for the site. Save these credentials somewhere safe.
+- The important details you’ll need are:
+    - The server **URL**
+    - The **Port**
+    - Your **Username**
+    - And your **Password**
 
-1. Log in to your WordPress.com account.
-2. Go to **My Site** → **Settings** → **Hosting Configuration**.
-3. Scroll down to the **SFTP/SSH Credentials** section.
+Copy these credentials and store them in somewhere or in a password manager. Never share your password publicly or via email.
 
-### **Step 2: Generate Your Credentials**
-
-- Click **Create SFTP Credentials**.
-- You’ll see your:
-    - **SFTP Username**
-    - **Server/Host Address**
-    - **Port Number** (usually 22)
-    - **Password** (auto-generated)
-
-> **Tip:** Copy these credentials and store them in a secure password manager. Never share your SFTP password publicly or via email.
-
-**Security Note:**  
-Your SFTP credentials are unique to your site. For extra security, you can regenerate your password at any time from this page.
-
----
+If you ever forget your password, you can return to the **SFTP/SSH** tab and regenerate your password using the **Reset password** option.
 
 ## **Setting Up an SFTP Client**
 
-Now, let’s set up an SFTP client so you can connect to your site. I’ll cover two popular options: **FileZilla** and **Cyberduck**.
+Now, let’s set up an SFTP client so you can connect to your site. In this video I’ll cover two popular options: **FileZilla** and **Cyberduck**.
 
-### **Option 1: FileZilla**
+### **FileZilla**
 
-#### **Install FileZilla**
+FileZilla is a popular, free, and open-source SFTP client that works on all operating systems. You can download it from the FileZilla website.
 
-- **Windows & macOS:**
-    - Download FileZilla from the official website.
-    - Run the installer and follow the prompts.
+1. Once installed, open FileZilla and click **File** → **Site Manager**. 
+2. Click **New Site** and give the site a name.
+3. In the settings panel, change the **Protocol** to **SFTP - SSH File Transfer Protocol**.
+4. Enter the **Host:**  and **Port:** values you copied earlier.
+5. Under **Logon Type:** select Normal
+6. Then enter your username in the **User:** field and your password
+7. Finally, click **Connect**.
 
-- **Linux:**
-    - Use your package manager:
-        - Ubuntu/Debian:
-          ```
-          sudo apt install filezilla
-          ```
-        - Fedora:
-          ```
-          sudo dnf install filezilla
-          ```
+The first time you connect, FileZilla may ask you to trust the server’s SSH key. This is normal—just confirm to proceed.
 
-#### **Configure FileZilla**
-
-1. Open FileZilla.
-2. Click **File** → **Site Manager**.
-3. Click **New Site** and name it (e.g., “My WordPress.com Site”).
-4. Enter the following details:
-    - **Host:** Your site’s SFTP server address.
-    - **Port:** 22
-    - **Protocol:** SFTP – SSH File Transfer Protocol
-    - **Logon Type:** Normal
-    - **User:** Your SFTP username
-    - **Password:** Your SFTP password
-5. Click **Connect**.
-
-> **What to Expect:**  
-> The first time you connect, FileZilla may ask you to trust the server’s SSH key. This is normal—just confirm to proceed.
-
----
+Once connected, you’ll see your site’s file structure on the right side of the FileZilla window. You can now drag and drop files to upload or download them.
 
 ### **Option 2: Cyberduck**
 
-#### **Install Cyberduck**
+Cyberduck is another popular SFPT client available both on macOS and Windows. You can download it from the Cyberduck website.
 
-- **macOS & Windows:**
-    - Download Cyberduck from the official website.
-    - Drag the app to your Applications folder (macOS) or run the installer (Windows).
+1. After you install and open Cyberduck, click the **New Bookmark** button.
+2. In the New Bookmark window, select **SFTP (SSH File Transfer Protocol)** from the dropdown.
+3. Give the bookmark a nickname
+4. Enter the **Server:** and **Port:** values you copied earlier.
+5. Add your **Username:**
+6. Enter your **Password:**
+7. Close the New Bookmark window and click the bookmark you just created to connect.
 
-#### **Configure Cyberduck**
+**Tip:** If you are asked to accept the server’s fingerprint key, click Allow to proceed.
 
-1. Open Cyberduck.
-2. Click the **Open Connection** button.
-3. Select **SFTP (SSH File Transfer Protocol)** from the dropdown.
-4. Enter:
-    - **Server:** Your SFTP server address
-    - **Port:** 22
-    - **Username:** Your SFTP username
-    - **Password:** Your SFTP password
-5. Click **Connect**.
+Once connected, you’ll see your site’s file structure in the Cyberduck window. You can now drag and drop files to upload or download them.
 
-> **Tip:** If you’re prompted about an “unknown host key,” review the fingerprint and accept if it matches what’s shown in your WordPress.com dashboard.
+## **Summary**
 
----
+For more details on enabling and connecting to SFTP, as well as troubleshooting tips, make sure to visit the official WordPress.com developer documentation on SFTP. (https://developer.wordpress.com/docs/developer-tools/sftp)
 
-## **Connecting to Your WordPress.com Site Using SFTP**
+If you found this tutorial helpful, please give it a like, subscribe for more WordPress.com developer tutorials, and drop your questions and feedback in the comments below. 
 
-Once your client is set up:
-
-- Click **Connect** in your SFTP client.
-- You’ll see your site’s file structure—typically folders like `wp-content`, `plugins`, `themes`, and `uploads`.
-
-**How to Use SFTP:**
-- Drag and drop files to upload or download.
-- Right-click files to rename, delete, or set permissions.
-- Always back up files before making changes!
-
-> **Security Reminder:**  
-> Never share your SFTP credentials. When done, disconnect from the server and close the client.
-
----
-
-## **Troubleshooting & Frequently Asked Questions**
-
-**Common Issues:**
-
-- **Can’t Connect?**
-    - Double-check your credentials—copy/paste carefully.
-    - Make sure you’re using SFTP (not FTP).
-    - Ensure your WordPress.com plan supports SFTP access.
-
-- **Password Not Working?**
-    - Regenerate your SFTP password from the dashboard and try again.
-
-- **Permission Denied?**
-    - You might be trying to edit restricted files. Stick to the `wp-content` folder for most changes.
-
-> For more troubleshooting tips, check out the official FAQ and troubleshooting documentation.
-
----
-
-## **Additional Resources**
-
-- **Official Docs:**
-    - [WordPress.com SFTP Overview]
-    - [How to Find Your Credentials]
-    - [SFTP Client Setup Guides]
-    - [SFTP FAQ & Troubleshooting]
-
----
-
-## **Summary & Call to Action**
-
-Today, you learned:
-
-- What SFTP is and why it’s essential for secure file management on WordPress.com.
-- How to create and secure your SFTP credentials.
-- How to set up and use FileZilla or Cyberduck on any major operating system.
-- Where to find help if you get stuck.
-
-If you found this tutorial helpful, please give it a thumbs up, subscribe for more WordPress.com tips, and drop your questions or experiences in the comments below. Check the video description for all the links to official documentation.
-
-Thanks for watching, and happy site building!
-
----
-
-**References:**
-: developer.wordpress.com/docs/developer-tools/sftp/
-: developer.wordpress.com/docs/developer-tools/sftp/credentials/
-: developer.wordpress.com/docs/developer-tools/sftp/client-setup/
-: developer.wordpress.com/docs/developer-tools/sftp/frequently-asked-questions/
-
----
-Answer from Perplexity: pplx.ai/share
+Happy coding!
