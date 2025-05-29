@@ -2,13 +2,9 @@
 
 ## **Introduction**
 
-Hey there, and welcome to this WordPress.com developer tools video. My name is Jonathan, and today we're going to learn how to connect to your WordPress.com site using SSH. 
+Hey there, and welcome to this WordPress.com developer tools video. 
 
-We'll cover:
-
-- Enabling SSH access on your site
-- Connecting to SSH for the first time
-- Generating and using SSH keys for passwordless authentication
+My name is Jonathan, and today we're going to learn how to connect to your WordPress.com site using SSH. 
 
 Let's get started!
 
